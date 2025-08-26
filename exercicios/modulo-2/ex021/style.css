@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Italianno&family=Original+Surfer&family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font: 400 1em 'Original Surfer', Arial, sans-serif;
+    background-color: gray;
+    margin: 20px;
+}
+
+a:hover {
+    font-style: italic;
+    text-decoration: underline;
+} 
+
+a {
+    text-decoration: none;
+    
+}
+
+a:visited {
+    color: blue;
+}
+
+a:active {
+    color: darkblue;
+}
+
+header {
+    background-color: lightgray;
+    padding: 10px, 5px, 20px, 5px;
+    border: 10px solid lightblue;
+    text-align: center;
+    height: 250px;
+    box-shadow: 1px 2px 6px black;
+    border-radius: 20px 0px;
+}
+
+nav {
+    background-color: lightcyan;
+    margin: auto;
+    width: 80px;
+    padding: 15px;
+    text-align: center;
+    border: black 2px solid;
+    box-shadow: 1px 2px 6px black;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 1px 2px 6px #00000025 inset;
+}
+
+footer > h2 {
+    color: white;
+}
+
+footer > h2:hover {
+    color: blue;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+footer > h2:active {
+    color: darkblue;
+}
+
+section {
+    background-color: lightcoral;
+    border: salmon 5px solid;
+    margin: 10px 0px 10px 0px;
+}
+
+
+
+

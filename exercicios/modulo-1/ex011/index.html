@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <title>Imagens dinamicas</title>
+</head>
+<body>
+    <h1>Imagens dinamicas</h1>
+        <p>Aumente ou diminua o tamanho da janela do seu navegador para ver</p>
+        <picture>
+            <source media="(max-width: 750px)" srcset="Imagens/pmg/pequeno.png" type="image/png">
+            <source media="(max-width: 1050px)" srcset="Imagens/pmg/medio.png" type="image/png">
+            <img src="Imagens/pmg/grande.png" alt="Imagem grande"> 
+        </picture>
+        <p>
+            <code>
+                <pre>
+&lt;picture&gt;
+    &lt;source media="(max-width: tamanho em pixel ex: 750px)" 
+     srcset="caminho da imagem" 
+     type="image/tipo da imagem"&gt;
+    &lt;img src="imagem maior, dependendo se for max-width, caso contrario, a menor"
+&lt;/picture&gt;
+
+NOTE: CASO TIVER MAIS DE UM SOURCE, E VOCE ESTIVER USANDO O "max-width",
+O PRIMEIRO SOURCE EM CONTAGEM DE LINHA VAI SER O MENOR, ASSIM SUSSESSIVAMENTE(ex: pequeno, medio, grande),
+CASO SEJA "min-width", O PRIMEIRO SOURCE EM CONTAGEM DE LINHA
+SERA O MAIOR, ASSIM SUSSESSIVAMENTE(ex: grande, medio, pequeno).
+                                                            
+                </pre>
+            </code>
+        </p>
+        
+</body>
+</html>

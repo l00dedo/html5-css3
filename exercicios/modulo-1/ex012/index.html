@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos</title>
+</head>
+<body>
+    <h1>Vídeos hospedados localmente</h1>
+        <p>Este vídeo está hospedado no meu servidor</p>
+    
+     <video autoplay loop>
+        <source src="midias/meu-video.webm" type="video/webm">
+        <source src="midias/meu-video2.mkv" type="video/mkv">
+        <source src="midias/videobrisante.mp4" type="video/mp4">
+        <p>Seu navegador não suporta videos</p>
+     </video> 
+
+     <h1>Vídeos do youtube</h1>
+        <p>Veja este video do Gustavo Guanabara</p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y?si=6Lm-z9BCZtANhJN1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <a href="https://www.youtube.com/watch?v=3hng-hmSv2Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=36" rel="external" target="_blank">https://www.youtube.com/watch?v=3hng-hmSv2Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=36</a>
+
+        <h1>Vídeos do vimeo</h1>
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/1082327151?h=25a758bbbe" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+
+     <hr>
+     <p>
+        <code>
+            <h2>Código</h2>
+            <pre>
+&lt;video&gt;
+    &lt;source src="caminho do arquivo" type="video/tipo do arquivo"&gt;
+&lt;/video&gt;
+            </pre>
+        </code>
+     </p>
+<hr>
+
+     <p>Não é recomendado utilizar a hospedagem de vídeos no seu servidor, pois a cada vizualização do vídeo ira pesar no seu cliente </p>
+</body>
+</html>

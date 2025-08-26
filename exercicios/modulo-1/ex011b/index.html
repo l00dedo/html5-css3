@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <title>Áudios</title>
+</head>
+<body>
+    <h1>Áudios</h1>
+        <p>Selecione o áudio:</p>
+            <audio controls preload="metadata">
+                <source src="midia/latido.mp3" type="audio/mp3">
+            </audio>
+
+    <p>Link de sites para audios</p>
+        <ul type="circle">
+            <li><a href="https://pixabay.com/pt/music/" rel="external" target="_blank">Pixabay</a></li>
+
+        </ul>
+    
+    <code>
+        <pre>
+&lt;audio&gt;
+    &lt;source src="caminho do arquivo" type="audio/tipo do aquivo"&gt;
+&lt;/audio&gt;
+
+NOTA: temos dois parametros importantes na tag audio,
+o autoplay e o controls,
+o auto play faz o audio reproduzir automaticamente,
+já o controls faz ter controles de play, pause e volume.
+Também podemos mudar o mediatype com o &lt;source src="caminnho do arquivo" type="audio/TIPO"&gt;,
+também temos o atributo preload que pode se usar para carregar o audio antes de ser
+reproduzido, o mais recomendado é o metadata, e também temos o 
+atributo loop que faz o audio repetir
+        </pre>
+    </code>
+</body>
+</html>

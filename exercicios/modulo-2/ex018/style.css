@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Minecraft';
+    src: url("fonts/Minecraft.ttf") format("truetype");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Minecraft', sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+}
