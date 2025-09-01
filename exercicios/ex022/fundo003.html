@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posição dos Fundos</title>
+    <style>
+        .bloco {
+            height: 500px;
+            border: 5px solid black;
+            display: block;
+            margin: 20px auto 20px auto;
+            width: 70%; 
+            background-image: url('imagens/wallpaper003.jpg');
+        }
+
+        .menu {
+            align-items: center;
+        }
+
+        #q1 {
+            background-position: left top;
+        }
+
+        #q2 {
+            background-position: right top;
+        }
+
+        #q3 {
+            background-position: left bottom;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="bloco" id="q1"></div>
+        <div class="bloco" id="q2"></div>
+        <div class="bloco" id="q3"></div>
+    </div>
+</body>
+</html>
