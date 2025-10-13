@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/* Todas as outras medias */
+
+@media print {
+    #phone { display: none; }
+    #tablet { display: none; }
+    #pc { display: none; }
+    #tv { display: none; }
+    #print { display: block; }
+
+    body {
+        background-image: url('../imagens/back-print.jpg');
+    }
+}
+
+/*------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    #phone { display: none; }
+    #tablet { display: block; }
+    #pc { display: none; }
+    #tv { display: none; }
+    #print { display: none; }
+
+    body {
+        background-image: url('../imagens/back-tablet.jpg');
+    }
+}
+
+/*------------------------------------------------------------*/
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    #phone { display: none; }
+    #tablet { display: none; }
+    #pc { display: block; }
+    #tv { display: none; }
+    #print { display: none; }
+
+    body {
+        background-image: url('../imagens/back-pc.jpg');
+    }
+}
+
+/*------------------------------------------------------------*/
+
+@media screen and (min-width: 1201px) {
+    #phone { display: none; }
+    #tablet { display: none; }
+    #pc { display: none; }
+    #tv { display: block; }
+    #print { display: none; }
+
+    body {
+        background-image: url('../imagens/back-tv.jpg');
+    }
+}
