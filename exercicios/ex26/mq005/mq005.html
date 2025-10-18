@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Responsivo</title>
+    <link rel="stylesheet" href="estilos/main.css" media="all">
+    <link rel="stylesheet" href="estilos/tablet.css" media="screen and (min-width: 787px) and (max-width: 992px)">
+    <link rel="stylesheet" href="estilos/desktop.css" media="screen and (min-width: 993px) and (max-width: 1200px)">
+    <link rel="stylesheet" href="estilos/g-telas.css" media="screen and (min-width: 1201px)">
 </head>
 <body>
-    
+    <header>
+        <h1>Menu Responsivo</h1>
+        
+            <img src="imagens/menu.png" alt="" id="menu" onclick="clickMenu()">
+
+        <nav id="itens">
+            <a href="#" id="one" class="btn">Botão 1</a>
+            <a href="#" id="two"class="btn">Botão 2</a>
+            <a href="#" id="three" class="btn">Botão 3</a>
+            <a href="#" id="four" class="btn">Botão 4</a>
+            <a href="#" id="five" class="btn">Botão 5</a>
+        </nav>
+
+
+
+    </header>
+
+    <main>
+        <h1>Menu Responsivo</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quaerat, quo numquam excepturi assumenda iusto hic perspiciatis minus delectus blanditiis totam ratione eligendi pariatur consequatur perferendis? Placeat perferendis sapiente Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam asperiores iste natus error exercitationem odit. Ratione possimus provident ipsam cumque similique dignissimos dolorem culpa ipsa eaque. Doloremque perspiciatis numquam impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est illo sapiente, qui quis sunt sint voluptatem rerum aut eligendi temporibus, nisi doloremque doloribus dolorem ut placeat debitis modi. Dicta, nam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil eligendi harum quibusdam quas dolorem maxime. Aut sunt dolorum quas, possimus, fuga alias hic repellat cumque tempore sed cupiditate ut commodi.</p>
+    </main>
+
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'inline-block') {
+                itens.style.display = 'none';
+            } else {
+                itens.style.display = 'inline-block';
+            }
+        }
+    </script>
 </body>
 </html>

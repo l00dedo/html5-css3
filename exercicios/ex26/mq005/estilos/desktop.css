@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+#itens {display: block;}
+#menu {display: none;}
+
+.btn {
+    width: 15%;
+    text-align: center;
+}
