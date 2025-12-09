@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+div.flex {
+    background-color: darksalmon;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+div.item {
+    background-color: seagreen;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    margin-left: 10px;
+    height: 35px;
+    width: 40px;
+
+    flex: auto;
+}

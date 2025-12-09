@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Hero';
+    src: url('font/HeroLight-Regular.woff') format('woff');
+}
+
+/* Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Page background */
+body {
+    background-color: #ffde59;
+}
+
+/* Header */
+header > img {
+    display: block;
+    width: 300px;
+    margin-bottom: 100px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Description section */
+section#descrip {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section#descrip > p {
+    font-family: 'Hero', sans-serif;
+    font-size: 2em;
+    margin-left: 50px;
+    justify-self: flex-start;
+}
+
+/* Image frame */
+div#img-frame-g {
+    display: flex;
+    flex-basis: 500px;
+    flex-grow: 0;
+    height: 314px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.356);
+    justify-self: center;
+}
+
+div#img-frame-g > img#img-g {
+    width: 100%;        
+    max-width: 400px;   
+    height: auto;
+    margin: auto;
+    border-radius: 50%;
+    display: block;
+    min-width: 0;  
+}
+
+div#major {
+    display: flex;
+    justify-content: flex-start;
+}
+
+div#img-frame-p {
+    display: flex;
+    width: 75%;
+    height: 300px;
+    padding: 10px;
+    margin-right: 0;
+    margin-left: 0; 
+    background-color: red;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.356);
+}
+
+div#img-frame-p > p {
+    color: white;
+    font-family: 'Hero', sans-serif;
+    font-size: 1.7em;
+    display: inline-block;
+    background-color: red;
+    height: 300px;
+    margin-right: 40px;
+}
+
+div#img-frame-p > img#img-p {
+    height: 300px;
+    width: 65%;
+    display: inline-block;
+}
+
+main > img {
+    display: block;
+    margin-top: 100px;
+    width: 100%;
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 743px) {
+    div#img-frame-g {
+        display: none;
+    }
+
+    section#descrip > p {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 742px) {
+    div#img-frame-p {
+        display: none;
+    }
+
+    section#descrip > p {
+        display: block;
+    }
+}

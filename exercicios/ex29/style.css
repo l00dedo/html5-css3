@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Lost in south';
+    src: url('font/lis.otf') format('opentype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arizonia&family=Bebas+Neue&family=Cal+Sans&family=Comic+Relief:wght@400;700&family=DynaPuff:wght@400..700&family=Italianno&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Peta:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Original+Surfer&family=Passion+One:wght@400;700;900&family=Pinyon+Script&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sigmar+One&family=Signika:wght@300..700&family=Sriracha&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #ff914d;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+header > h1 {
+    font-family: 'Lost in south', sans-serif;
+    margin: 15px 15px 15px 40px;
+    font-size: 4em;
+    text-shadow: 2px 2px 2px white;
+}
+
+nav {
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: space-around;
+
+    width: 450px;
+    margin-top: 15px;
+    font-family: 'Merriweather Sans', sans-serif;
+
+}
+
+a#nav {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    margin-left: 10px;
+}
+
+a#nav:hover {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+section#energy {
+    display: flex;
+    flex-flow: row wrap;
+
+    width: 80%;
+    margin: auto;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 60px;
+}
+
+section#energy, section#buy {
+    max-width: 900px;
+}
+
+input#buybutton {
+    outline: none;
+    border: 0;
+    display: block;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: red;
+    font-family: 'Lost in south', sans-serif;
+    font-size: 2em;
+
+    flex: 1 1 0;   
+    min-width: 0px;  
+    margin: 20px auto 0;
+    box-shadow: 0px 10px 0 rgb(94, 3, 3);
+    min-width: 134px;
+}
+
+input#buybutton:hover {
+    cursor: pointer;
+}
+
+input#buybutton:active {
+    box-shadow: 0px 0px 0px;
+    transform: translateY(10px);
+    transition: all 0.2s;
+}
+
+section#buy {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    background-color: white;
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+img {
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 400px;
+    min-width: 0px;
+    align-self: stretch;
+}
+
+@media  screen and (max-width:891px) {
+    img {
+        margin: auto;
+    }
+}
+
+@media  screen and (max-width:670px) {
+    header > h1 {
+        margin: auto;
+    }
+
+    nav {
+        margin: 20px auto;
+    }
+}
+
