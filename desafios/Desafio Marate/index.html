@@ -5,48 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marate - Hamburgueres, Sorvetes. Strogonoff</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cll.css" media="screen and (max-width: 768px)">
 </head>
 <body>
+
     <header>
-        <img src="imagens/marate.png" alt="">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="">
+
+            <p>
+                <span id="s">STROGONOFF</span> <br>
+                <span id="e">EXPRESS</span>
+            </p>        
+            
+
+        </div>
+            
+        <div class="menu">
+            <nav>
+                <a href="" id="text-menu">MENU</a>
+                <a href="" id="text-menu">COMBOS</a>
+                <a href="" id="text-menu">DELIVERY</a>
+                <a href="" id="text-menu">ABOUT</a>
+                <a href="" id="icon-menu">+</a>
+            </nav>
+        </div>
+
     </header>
 
-        <section id="descrip">
+    <main>
+        <div class="introduction">
             <p>
-                Strogonoff, <br>
-                Lanches, <br>
-                Sorvetes. <br>
-                <br>
-                <br>
-                De tudo, <br>
-                Em um.
+                O SABOR CASEIRO <br>
+                ENTREGUE NA <br>
+                SUA PORTA
             </p>
-            <div id="img-frame-g">
-                <img src="imagens/marato.png" alt="" id="img-g">
-            </div>
-
-
-
-        </section>
-
-            <div id="major">
-                <div id="img-frame-p">
-                    <p>
-                        Strogonoff, <br>
-                        Lanches, <br>
-                        Sorvetes. <br>
-                        <br>
-                        <br>
-                        De tudo, <br>
-                        Em um.
-                    </p>
-                    <img src="imagens/marato.png" alt="" id="img-p">
-                </div>
-            </div>
             
-        <main>
-            <img src="imagens/flower-line (1).png" alt="">
-        </main>
+            <button type="button">PEÇA AGORA</button>
+        </div>
 
+        <div class="speciality">
+            <h2>NOSSAS ESPECIALIDADES</h2>
+                <div class="img">
+                    <div class="bat">
+                        <img src="imagens/Pacote-de-batata-palha.png" alt="" id="bat">
+                        <p>Batata Palha original Strogonoff Express</p>
+                    </div>
+
+
+                    <div class="stro">
+                        <img src="imagens/strog-b-a-w.png" alt="" id="stro">
+                        <p>Preparamos strogonoff desde 1943</p>
+                    </div>
+                </div>                   
+        </div>
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <!-- Overlay triggered by #icon-menu -->
+    <div id="overlay" class="overlay" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="overlay-inner">
+            <button id="overlay-close" class="overlay-close" aria-label="Fechar menu">×</button>
+            <nav class="overlay-nav" aria-label="Menu temporário">
+                <a href="#" class="overlay-link">MENU</a>
+                <a href="#" class="overlay-link">COMBOS</a>
+                <a href="#" class="overlay-link">DELIVERY</a>
+                <a href="#" class="overlay-link">ABOUT</a>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            const icon = document.getElementById('icon-menu');
+            const overlay = document.getElementById('overlay');
+            const closeBtn = document.getElementById('overlay-close');
+            const header = document.querySelector('header');
+            const main = document.querySelector('main');
+            const footer = document.querySelector('footer');
+
+            function openOverlay(e){
+                e.preventDefault();
+                overlay.classList.add('open');
+                overlay.setAttribute('aria-hidden','false');
+                header && header.setAttribute('aria-hidden','true');
+                main && main.setAttribute('aria-hidden','true');
+                footer && footer.setAttribute('aria-hidden','true');
+                document.body.classList.add('no-scroll');
+            }
+
+            function closeOverlay(){
+                overlay.classList.remove('open');
+                overlay.setAttribute('aria-hidden','true');
+                header && header.removeAttribute('aria-hidden');
+                main && main.removeAttribute('aria-hidden');
+                footer && footer.removeAttribute('aria-hidden');
+                document.body.classList.remove('no-scroll');
+            }
+                let _resizeHandler = null;
+
+                function placeCloseButtonAtIcon(){
+                    if(!icon || !closeBtn) return false;
+                    const style = window.getComputedStyle(icon);
+                    if(style.display === 'none' || style.visibility === 'hidden') return false;
+                    const rect = icon.getBoundingClientRect();
+                    // center close button on icon center
+                    const btnWidth = closeBtn.getBoundingClientRect().width || 32;
+                    const left = rect.left + (rect.width / 2) - (btnWidth / 2);
+                    // apply positioning; unset 'right' to avoid conflicts
+                    closeBtn.style.right = 'auto';
+                    closeBtn.style.left = Math.max(6, Math.round(left)) + 'px';
+                    closeBtn.style.top = Math.max(6, Math.round(rect.top)) + 'px';
+                    return true;
+                }
+
+                function openOverlay(e){
+                    e.preventDefault();
+                    // compute position before locking scroll to get correct viewport coords
+                    const placed = placeCloseButtonAtIcon();
+                    overlay.classList.add('open');
+                    overlay.setAttribute('aria-hidden','false');
+                    header && header.setAttribute('aria-hidden','true');
+                    main && main.setAttribute('aria-hidden','true');
+                    footer && footer.setAttribute('aria-hidden','true');
+                    lockScroll();
+                    // if placement failed (icon hidden), ensure default corner position
+                    if(!placed){
+                        closeBtn.style.left = '';
+                        closeBtn.style.right = '12px';
+                        closeBtn.style.top = '12px';
+                    }
+                    // update position on resize while open
+                    _resizeHandler = function(){ placeCloseButtonAtIcon(); };
+                    window.addEventListener('resize', _resizeHandler);
+                    // focus first menu link if present
+                    const firstLink = overlay.querySelector('.overlay-link');
+                    if(firstLink){ firstLink.focus(); } else { closeBtn && closeBtn.focus(); }
+                }
+
+                function closeOverlay(){
+                    overlay.classList.remove('open');
+                    overlay.setAttribute('aria-hidden','true');
+                    header && header.removeAttribute('aria-hidden');
+                    main && main.removeAttribute('aria-hidden');
+                    footer && footer.removeAttribute('aria-hidden');
+                    unlockScroll();
+                    // cleanup inline positioning and resize handler
+                    if(closeBtn){ closeBtn.style.left = ''; closeBtn.style.top = ''; closeBtn.style.right = ''; }
+                    if(_resizeHandler){ window.removeEventListener('resize', _resizeHandler); _resizeHandler = null; }
+                }
+
+            icon && icon.addEventListener('click', openOverlay);
+            closeBtn && closeBtn.addEventListener('click', closeOverlay);
+            overlay && overlay.addEventListener('click', function(e){ if(e.target === overlay) closeOverlay(); });
+            document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && overlay.classList.contains('open')) closeOverlay(); });
+        })();
+    </script>
 </body>
 </html>
